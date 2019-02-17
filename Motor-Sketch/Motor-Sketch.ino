@@ -1,7 +1,7 @@
 #include "Motor.h"
 
 Motor motor_1(5,6);
-Motor motor_2(7,8);
+Motor motor_2(9,10);
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);

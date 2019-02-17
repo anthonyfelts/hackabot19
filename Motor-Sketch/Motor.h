@@ -10,8 +10,8 @@ class Motor
 {
   public:
     Motor(int FPIN, int RPIN);
-    int move(int moveValue);
-    int rotate(int rotateValue);
+    void move(int moveValue);
+    void rotate(int rotateValue);
   private:
     int FPIN;
     int RPIN;
