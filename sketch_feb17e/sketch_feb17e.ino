@@ -1,7 +1,7 @@
 #include "DistanceDetect.h"
 
 const int ledPin = 13;
-dist DistanceDetect(8,7);
+DistanceDetect dist(8,7);
 
 void setup() {
   // put your setup code here, to run once:
