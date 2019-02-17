@@ -23,7 +23,8 @@ void Motor::move(int moveValue) {
 }
 
 void Motor::rotate(int rotateValue){
-    rotateValue = (rotateValue > 225) ? 255 : (rotateValue < -255) ? -255 : rotateValue;
+    rotateValue = (rotateValue > 255) ? 255 : (rotateValue < -255) ? -255 : rotateValue;
     analogWrite(FPIN, (rotateValue > 20) ? rotateValue : 0);
     analogWrite(RPIN, (rotateValue < -20) ? -rotateValue : 0);
+    return;
 }
