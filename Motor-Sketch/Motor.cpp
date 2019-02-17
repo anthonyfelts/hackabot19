@@ -20,6 +20,7 @@ void Motor::move(int moveValue) {
     {
       analogWrite(RPIN, (moveValue < -20) ? -moveValue : 0);
     }
+    return;
 }
 
 void Motor::rotate(int rotateValue){
