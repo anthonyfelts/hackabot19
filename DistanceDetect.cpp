@@ -1,3 +1,4 @@
+#include <DistanceDetect.h>
 /*
   DistanceDetect
   Has constructor and function that returns distance from sonar
