@@ -10,13 +10,13 @@ Motor::Motor(int FPIN, int RPIN)
     this->RPIN = RPIN;
  }
 
-int Motor::move(int moveValue) {
+void Motor::move(int moveValue) {
     moveValue = (moveValue > 255) ? 255 : (moveValue < -255) ? -255 : moveValue;
     analogWrite(FPIN, (moveValue > 20) ? moveValue : 0);
     analogWrite(RPIN, (moveValue < -20) ? -moveValue : 0);
 }
 
-int Motor::rotate(int rotateValue){
+void Motor::rotate(int rotateValue){
     rotateValue = (rotateValue > 225) ? 255 : (rotateValue < -255) ? -255 : rotateValue;
     analogWrite(FPIN, (rotateValue > 20) ? rotateValue : 0);
     analogWrite(RPIN, (rotateValue < -20) ? -rotateValue : 0);
