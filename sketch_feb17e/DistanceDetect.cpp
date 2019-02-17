@@ -6,8 +6,8 @@
 
 DistanceDetect::DistanceDetect(int trigPin, int echoPin)
 {
-  this.trigPin = trigPin;
-  this.echoPin = echoPin;
+  this->trigPin = trigPin;
+  this->echoPin = echoPin;
   pinMode(trigPin, OUTPUT); // set pins to correct input values
   pinMode(echoPin, INPUT);
 }
