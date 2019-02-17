@@ -12,10 +12,10 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   int i = dist.checkDist();
-  if (i > 5) {
+  if(i > 5 && i < 10){
       digitalWrite(ledPin, HIGH);
   }
-  else {
+  else{
       digitalWrite(ledPin, LOW);
   }
   delay(250);
