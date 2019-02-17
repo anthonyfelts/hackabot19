@@ -1,4 +1,4 @@
-#include <DistanceDetect.h>
+#include "DistanceDetect.h"
 /*
   DistanceDetect
   Has constructor and function that returns distance from sonar
@@ -6,6 +6,8 @@
 
 DistanceDetect::DistanceDetect(int trigPin, int echoPin)
 {
+  this.trigPin = trigPin;
+  this.echoPin = echoPin;
   pinMode(trigPin, OUTPUT); // set pins to correct input values
   pinMode(echoPin, INPUT);
 }

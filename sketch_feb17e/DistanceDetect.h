@@ -11,6 +11,8 @@ class DistanceDetect
 {
   public:
     DistanceDetect(int trigPin, int echoPin);
+    int trigPin;
+    int echoPin;
     int checkDist();
 };
 
