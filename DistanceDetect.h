@@ -5,6 +5,7 @@
 #define DistanceDetect_h
 
 #include "Arduino.h"
+#include "DistanceDetect.h"
 
 class DistanceDetect
 {
