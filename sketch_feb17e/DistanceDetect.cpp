@@ -13,7 +13,7 @@ DistanceDetect::DistanceDetect(int trigPin, int echoPin)
 }
 
 int DistanceDetect::checkDist() {
-  long duration, cm, inches;
+  long duration, inches;
   digitalWrite(trigPin, LOW);
   delayMicroseconds(5);
   digitalWrite(trigPin, HIGH);
@@ -21,7 +21,6 @@ int DistanceDetect::checkDist() {
   digitalWrite(trigPin, LOW);
   pinMode(echoPin, INPUT);
   duration = pulseIn(echoPin, HIGH);
-  cm = (duration/2) / 29.1;
-  return cm;
-  delay(350);
+  inches = duration / 74 / 2;
+  return inches;
 }
