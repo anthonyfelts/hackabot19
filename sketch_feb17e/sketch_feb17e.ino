@@ -1,5 +1,6 @@
 #include "DistanceDetect.h"
 #include "Motor.h"
+#include <Servo.h>
 
 DistanceDetect dist(7,8);
 Motor motor_1(5,6);
@@ -7,11 +8,12 @@ Motor motor_2(3,11);
 bool part1 = true;
 bool part2 = false;
 bool part3 = false;
-int part2Count = 0;
+Servo myservo;
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
+  myservo.attach(9);
 }
 
 void loop() {
@@ -35,18 +37,21 @@ void loop() {
     }
   }
   else if (part2) { //add rotation code
-    motor_1.rotate(motor_2, 50);
+    motor_1.rotate(motor_2, 240);
+    delay(100);
     // add servo code
+    myservo.write(180);
+    delay(100);
     motor_1.move(100);
     motor_2.move(100);
     delay(100);
-    motor_2.rotate(motor_1, 50);
+    motor_2.rotate(motor_1, 240);
     part3 = true;
     part1 = false;
     part2 = false;
   }
   else if (part3) {
-    d = dist.checkDist();
+    int d = dist.checkDist();
     delayMicroseconds(30);
     if (d <= 1) {
       delay(1000);
