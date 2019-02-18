@@ -5,6 +5,7 @@
 #define Motor_h
 
 #include "Arduino.h"
+#include "Motor.h"
 
 class Motor
 {

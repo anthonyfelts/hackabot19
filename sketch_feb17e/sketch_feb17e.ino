@@ -13,8 +13,6 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  motor_1.rotate(motor_2, 100);
-  delay(1000);
   int i = dist.checkDist();
   while (i > 3) {
     motor_1.move(100);
