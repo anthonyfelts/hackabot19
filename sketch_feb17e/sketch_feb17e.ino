@@ -32,8 +32,8 @@ void loop() {
     }
     else
     {
-      motor_1.move(200);
-      motor_2.move(190);
+      motor_1.move(180);
+      motor_2.move(200);
       delay(100);
     }
   }
@@ -43,7 +43,7 @@ void loop() {
     // add servo code
     myservo.write(0);
     delay(2000);
-    motor_1.move(150);
+    motor_1.move(130);
     motor_2.move(150);
     delay(2000);
     motor_2.rotate(motor_1, 140);
@@ -64,7 +64,7 @@ void loop() {
     }
     else
     {
-      motor_1.move(200);
+      motor_1.move(180);
       motor_2.move(200);
       delay(100);
     }
