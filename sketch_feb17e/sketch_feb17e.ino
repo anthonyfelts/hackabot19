@@ -40,7 +40,7 @@ void loop() {
     motor_1.rotate(motor_2, 240);
     delay(100);
     // add servo code
-    myservo.write(180);
+    myservo.write(0);
     delay(100);
     motor_1.move(100);
     motor_2.move(100);
