@@ -15,13 +15,11 @@ void loop() {
   // put your main code here, to run repeatedly:
   motor_1.rotate(motor_2, 100);
   delay(1000);
-  motor_1.move(100);
-  motor_2.move(100);
-  delay(1000);
   int i = dist.checkDist();
-  Serial.print(i);
-  if(i < 3){
-      return;
+  while (i > 3) {
+    motor_1.move(100);
+    motor_2.move(100);
+    i = dist.checkDist();
   }
-  delay(1000);
+  return;
 }
