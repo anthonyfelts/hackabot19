@@ -14,11 +14,11 @@ void Motor::move(int moveValue) {
     moveValue = (moveValue > 255) ? 255 : (moveValue < -255) ? -255 : moveValue;
     if (moveValue > -1)
     {
-      analogWrite(FPIN, moveValue);
+      analogWrite(this->FPIN, moveValue);
     }
     else
     {
-      analogWrite(RPIN, -moveValue);
+      analogWrite(this->RPIN, moveValue);
     }
     return;
 }
@@ -27,6 +27,6 @@ void Motor::rotate(Motor bitchMotor, int rotateValue){
     rotateValue = (rotateValue > 255) ? 255 : (rotateValue < -255) ? -255 : rotateValue;
 
     analogWrite(this->FPIN, rotateValue);
-    analogWrite(bitchMotor.FPIN, rotateValue);
+    analogWrite(bitchMotor.RPIN, rotateValue);
     return;
 }
