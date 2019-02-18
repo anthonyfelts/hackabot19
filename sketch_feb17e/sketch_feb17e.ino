@@ -14,8 +14,8 @@ void loop() {
   // put your main code here, to run repeatedly:
   motor_1.move(150);
   motor_2.move(150);
-  delay(1000);
+  delay(100);
   motor_1.move(-150);
   motor_2.move(-150);
-  delay(1000);
+  delay(100);
 }
