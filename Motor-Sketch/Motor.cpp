@@ -23,9 +23,10 @@ void Motor::move(int moveValue) {
     return;
 }
 
-void Motor::rotate(int rotateValue){
+void Motor::rotate(Motor bitchMotor, int rotateValue){
     rotateValue = (rotateValue > 255) ? 255 : (rotateValue < -255) ? -255 : rotateValue;
-    analogWrite(FPIN, (rotateValue > 20) ? rotateValue : 0);
-    analogWrite(RPIN, (rotateValue < -20) ? -rotateValue : 0);
+
+    analogWrite(this->FPIN, rotateValue);
+    analogWrite(bitchMotor->FPIN, -rotateValue);
     return;
 }
