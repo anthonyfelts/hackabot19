@@ -39,13 +39,13 @@ void loop() {
   }
   else if (part2) { //add rotation code
     motor_1.rotate(motor_2, 240);
-    delay(500);
+    delay(2000);
     // add servo code
     myservo.write(0);
-    delay(500);
+    delay(2000);
     motor_1.move(150);
     motor_2.move(150);
-    delay(500);
+    delay(2000);
     motor_2.rotate(motor_1, 240);
     part3 = true;
     part1 = false;
