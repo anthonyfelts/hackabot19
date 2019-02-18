@@ -10,5 +10,5 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   motor_1.rotate(motor_2,150);
-
+  delay(1000);
 }
