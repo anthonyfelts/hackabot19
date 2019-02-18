@@ -14,11 +14,11 @@ void Motor::move(int moveValue) {
     moveValue = (moveValue > 255) ? 255 : (moveValue < -255) ? -255 : moveValue;
     if (moveValue > -1)
     {
-      analogWrite(FPIN, (moveValue > 20) ? moveValue : 0);
+      analogWrite(FPIN, moveValue);
     }
     else
     {
-      analogWrite(RPIN, (moveValue < -20) ? -moveValue : 0);
+      analogWrite(RPIN, -moveValue);
     }
     return;
 }
