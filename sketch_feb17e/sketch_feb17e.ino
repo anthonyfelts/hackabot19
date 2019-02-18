@@ -21,7 +21,7 @@ void loop() {
   if (part1) {
     int d = dist.checkDist();
     delayMicroseconds(100);
-    if (d < 6) {
+    if (d < 7) {
       delay(1000);
       motor_1.move(255);
       motor_2.move(255);
@@ -46,7 +46,7 @@ void loop() {
     motor_1.move(135);
     motor_2.move(150);
     delay(2000);
-    motor_2.rotate(motor_1, 150, 1000);
+    motor_2.rotate(motor_1, 150, 750);
     part3 = true;
     part1 = false;
     part2 = false;
