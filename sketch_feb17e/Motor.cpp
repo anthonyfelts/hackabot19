@@ -23,13 +23,13 @@ void Motor::move(int moveValue) {
     return;
 }
 
-void Motor::rotate(Motor bitchMotor, int rotateValue){
-  for (int i = 0; i < 2; i++){
+void Motor::rotate(Motor bitchMotor, int rotateValue, int wait){
     rotateValue = (rotateValue > 255) ? 255 : (rotateValue < -255) ? -255 : rotateValue;
 
     analogWrite(this->FPIN, rotateValue);
     analogWrite(bitchMotor.RPIN, rotateValue);
-    delay(100);
-    }
+    delay(wait);
+    analogWrite(this->FPIN, 255);
+    analogWrite(bitchMotor.RPIN, 255);
     return;
 }
