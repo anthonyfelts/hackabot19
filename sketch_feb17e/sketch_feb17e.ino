@@ -12,10 +12,12 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if (dist.checkDist() < 5) {
+  int d = dist.checkDist();
+  delayMicroseconds(30);
+  if (d < 5) {
     delay(1000);
-    motor_1.move(0);
-    motor_2.move(0);
+    motor_1.move(255);
+    motor_2.move(255);
     return;
   }
   else
