@@ -1,4 +1,5 @@
 #include "DistanceDetect.h"
+#include "Motor.h"
 
 const int ledPin = 13;
 DistanceDetect dist(7,8);
