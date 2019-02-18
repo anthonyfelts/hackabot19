@@ -12,7 +12,6 @@ class Motor
     Motor(int FPIN, int RPIN);
     void move(int moveValue);
     void rotate(Motor bitchMotor, int rotateValue);
-  private:
     int FPIN;
     int RPIN;
 };
