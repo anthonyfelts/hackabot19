@@ -15,8 +15,8 @@ void loop() {
   // put your main code here, to run repeatedly:
   int i = dist.checkDist();
   while (i > 5) {
-    motor_1.move(-100);
-    motor_2.move(-100);
+    motor_1.move(100);
+    motor_2.move(100);
     i = dist.checkDist();
   }
   motor_1.move(0);
